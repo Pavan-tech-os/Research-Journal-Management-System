@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Register | Research Journal Management System</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        body {
+            min-height: 100vh;
+            background: #eef4fb;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .register-container {
+            flex: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            padding: 40px 20px;
+        }
+
+        .register-box {
+            width: 450px;
+
+            background: white;
+
+            padding: 40px;
+
+            border-radius: 10px;
+
+            border: 1px solid #dfe4ea;
+
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .register-header {
+            text-align: center;
+
+            margin-bottom: 28px;
+        }
+
+        .register-icon {
+            width: 55px;
+            height: 55px;
+
+            background: #164a8a;
+
+            color: white;
+
+            border-radius: 50%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin: 0 auto 15px;
+
+            font-size: 25px;
+        }
+
+        .register-header h1 {
+            font-size: 25px;
+
+            margin-bottom: 8px;
+        }
+
+        .register-header p {
+            color: #777;
+
+            font-size: 13px;
+        }
+
+        .form-row {
+            display: flex;
+
+            gap: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+
+            flex: 1;
+        }
+
+        .form-group label {
+            display: block;
+
+            font-size: 13px;
+
+            font-weight: bold;
+
+            margin-bottom: 8px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #ccd3dc;
+
+            border-radius: 5px;
+
+            font-size: 14px;
+
+            outline: none;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #164a8a;
+        }
+
+        .terms {
+            display: flex;
+
+            align-items: flex-start;
+
+            gap: 8px;
+
+            font-size: 12px;
+
+            color: #666;
+
+            margin-bottom: 20px;
+        }
+
+        .terms input {
+            margin-top: 2px;
+        }
+
+        .terms a {
+            color: #164a8a;
+
+            text-decoration: none;
+        }
+
+        .register-submit {
+            width: 100%;
+
+            padding: 13px;
+
+            background: #164a8a;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 5px;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+
+        .register-submit:hover {
+            background: #103b70;
+        }
+
+        .login-text {
+            text-align: center;
+
+            margin-top: 22px;
+
+            font-size: 13px;
+
+            color: #666;
+        }
+
+        .login-text a {
+            color: #164a8a;
+
+            font-weight: bold;
+
+            text-decoration: none;
+        }
+
+        .back-home {
+            text-align: center;
+
+            margin-top: 15px;
+        }
+
+        .back-home a {
+            color: #666;
+
+            text-decoration: none;
+
+            font-size: 12px;
+        }
+
+        @media (max-width: 550px) {
+
+            .register-box {
+                width: 100%;
+
+                padding: 30px 20px;
+            }
+
+            .form-row {
+                flex-direction: column;
+
+                gap: 0;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- Navigation -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            📚 Research Journal
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="index.html#about">
+                About
+            </a>
+
+            <a href="index.html#features">
+                Features
+            </a>
+
+            <a href="index.html#workflow">
+                Workflow
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- Register -->
+
+    <main class="register-container">
+
+        <div class="register-box">
+
+
+            <div class="register-header">
+
+                <div class="register-icon">
+                    👤
+                </div>
+
+                <h1>Create Account</h1>
+
+                <p>
+                    Join our research publishing platform
+                </p>
+
+            </div>
+
+
+            <form id="registerForm">
+
+
+                <!-- Name -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="firstName">
+                            First Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="firstName"
+                            placeholder="First name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="lastName">
+                            Last Name
+                        </label>
+
+                        <input
+                            type="text"
+                            id="lastName"
+                            placeholder="Last name"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+                </div>
+
+
+                <!-- Role -->
+
+                <div class="form-group">
+
+                    <label for="role">
+                        Register As
+                    </label>
+
+                    <select id="role" required>
+
+                        <option value="">
+                            Select your role
+                        </option>
+
+                        <option value="author">
+                            Author
+                        </option>
+
+                        <option value="editor">
+                            Editor
+                        </option>
+
+                        <option value="reviewer">
+                            Reviewer
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="form-row">
+
+                    <div class="form-group">
+
+                        <label for="password">
+                            Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Create password"
+                            minlength="6"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="confirmPassword">
+                            Confirm Password
+                        </label>
+
+                        <input
+                            type="password"
+                            id="confirmPassword"
+                            placeholder="Confirm password"
+                            minlength="6"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- Terms -->
+
+                <div class="terms">
+
+                    <input
+                        type="checkbox"
+                        id="terms"
+                        required
+                    >
+
+                    <label for="terms">
+
+                        I agree to the
+                        <a href="#">
+                            Terms & Conditions
+                        </a>
+                        and
+                        <a href="#">
+                            Privacy Policy
+                        </a>
+
+                    </label>
+
+                </div>
+
+
+                <!-- Register Button -->
+
+                <button
+                    type="submit"
+                    class="register-submit"
+                >
+                    Create Account
+                </button>
+
+
+            </form>
+
+
+            <!-- Login -->
+
+            <div class="login-text">
+
+                Already have an account?
+
+                <a href="login.html">
+                    Login
+                </a>
+
+            </div>
+
+
+            <!-- Back -->
+
+            <div class="back-home">
+
+                <a href="index.html">
+                    ← Back to Home
+                </a>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        document
+            .getElementById("registerForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const password =
+                    document.getElementById("password").value;
+
+                const confirmPassword =
+                    document.getElementById("confirmPassword").value;
+
+                if (password !== confirmPassword) {
+
+                    alert("Passwords do not match.");
+
+                    return;
+                }
+
+                alert("Account created successfully!");
+
+            });
+
+    </script>
+
+
+</body>
+
+</html>

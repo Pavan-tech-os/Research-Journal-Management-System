@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Revision Tracking</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+        }
+
+        .sidebar {
+            position: fixed;
+            width: 240px;
+            height: 100vh;
+            background: #163f6f;
+            color: white;
+            padding: 25px 15px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 0 15px 30px;
+            border-bottom: 1px solid #31577f;
+        }
+
+        .menu {
+            margin-top: 30px;
+        }
+
+        .menu a {
+            display: block;
+            color: #dce7f3;
+            text-decoration: none;
+            padding: 13px 15px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .menu a:hover,
+        .menu a.active {
+            background: #24578f;
+            color: white;
+        }
+
+        .main {
+            margin-left: 240px;
+            padding: 35px 45px;
+        }
+
+        .header {
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 26px;
+        }
+
+        .header p {
+            color: #777;
+            font-size: 13px;
+            margin-top: 6px;
+        }
+
+        .revision-box {
+            background: white;
+            border: 1px solid #e1e5eb;
+            border-radius: 8px;
+            padding: 28px;
+            max-width: 900px;
+            margin-bottom: 25px;
+        }
+
+        .paper-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .paper-heading h2 {
+            font-size: 19px;
+            color: #163f6f;
+        }
+
+        .paper-heading p {
+            color: #777;
+            font-size: 12px;
+            margin-top: 6px;
+        }
+
+        .status {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 7px 12px;
+            border-radius: 15px;
+            font-size: 11px;
+        }
+
+        .feedback {
+            background: #fff8e6;
+            border-left: 4px solid #e0a800;
+            padding: 18px;
+            margin: 22px 0;
+        }
+
+        .feedback h3 {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .feedback p {
+            font-size: 13px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .history h3 {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .version {
+            display: flex;
+            gap: 20px;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .version-number {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background: #163f6f;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 12px;
+        }
+
+        .version-info h4 {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .version-info p {
+            color: #777;
+            font-size: 12px;
+        }
+
+        .upload-section {
+            margin-top: 25px;
+        }
+
+        .upload-section h3 {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .upload-box {
+            border: 2px dashed #cbd5e1;
+            padding: 25px;
+            text-align: center;
+            border-radius: 7px;
+            background: #fafcff;
+        }
+
+        .upload-box p {
+            color: #777;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .upload-box input {
+            width: auto;
+        }
+
+        .submit-btn {
+            margin-top: 18px;
+            padding: 12px 20px;
+            background: #163f6f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        @media(max-width: 700px) {
+
+            .sidebar {
+                width: 70px;
+            }
+
+            .logo {
+                font-size: 0;
+            }
+
+            .menu a {
+                font-size: 0;
+                text-align: center;
+            }
+
+            .main {
+                margin-left: 70px;
+                padding: 20px;
+            }
+
+            .paper-heading {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            📚 Research Journal
+        </div>
+
+        <div class="menu">
+
+            <a href="dashboard.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="submit-paper.html">
+                📄 Submit Paper
+            </a>
+
+            <a href="submissions.html">
+                📋 My Submissions
+            </a>
+
+            <a href="revisions.html"
+               class="active">
+                🔄 Revisions
+            </a>
+
+            <a href="../index.html">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <div class="header">
+
+            <h1>Revision Tracking</h1>
+
+            <p>
+                View reviewer feedback and submit revised papers.
+            </p>
+
+        </div>
+
+
+        <div class="revision-box">
+
+
+            <div class="paper-heading">
+
+                <div>
+
+                    <h2>
+                        Network Security in Modern Systems
+                    </h2>
+
+                    <p>
+                        Paper ID: RJMS003
+                    </p>
+
+                </div>
+
+                <span class="status">
+                    Revision Required
+                </span>
+
+            </div>
+
+
+            <!-- FEEDBACK -->
+
+            <div class="feedback">
+
+                <h3>
+                    Reviewer Feedback
+                </h3>
+
+                <p>
+                    The methodology section requires more explanation.
+                    Please provide additional experimental results and
+                    improve the discussion section.
+                </p>
+
+            </div>
+
+
+            <!-- HISTORY -->
+
+            <div class="history">
+
+                <h3>
+                    Version History
+                </h3>
+
+
+                <div class="version">
+
+                    <div class="version-number">
+                        1
+                    </div>
+
+                    <div class="version-info">
+
+                        <h4>
+                            Initial Submission
+                        </h4>
+
+                        <p>
+                            Submitted on 20 Aug 2026
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="version">
+
+                    <div class="version-number">
+                        2
+                    </div>
+
+                    <div class="version-info">
+
+                        <h4>
+                            Reviewer Feedback Received
+                        </h4>
+
+                        <p>
+                            Review completed on 28 Aug 2026
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- UPLOAD REVISION -->
+
+            <div class="upload-section">
+
+                <h3>
+                    Upload Revised Paper
+                </h3>
+
+                <div class="upload-box">
+
+                    <p>
+                        Upload the updated version of your paper
+                    </p>
+
+                    <input
+                        type="file"
+                        accept=".pdf,.doc,.docx"
+                        id="revisionFile"
+                    >
+
+                </div>
+
+                <button
+                    class="submit-btn"
+                    onclick="submitRevision()">
+
+                    Submit Revision
+
+                </button>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        function submitRevision() {
+
+            const file =
+                document.getElementById("revisionFile");
+
+            if (file.files.length === 0) {
+
+                alert(
+                    "Please select a revised paper first."
+                );
+
+                return;
+            }
+
+            alert(
+                "Revised paper submitted successfully!"
+            );
+
+            file.value = "";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

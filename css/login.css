@@ -1,0 +1,391 @@
+/* ================= LOGIN PAGE ================= */
+
+.login-section {
+
+    min-height: calc(100vh - 70px);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 50px 7%;
+
+    background: #f3f6fa;
+}
+
+
+/* MAIN LOGIN BOX */
+
+.login-wrapper {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    background: white;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    border: 1px solid #e0e5eb;
+
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* ================= IMAGE ================= */
+
+.login-image {
+
+    position: relative;
+
+    min-height: 560px;
+
+    overflow: hidden;
+}
+
+
+/* IMPORTANT */
+
+.login-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* DARK OVERLAY */
+
+.login-image::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(15, 45, 80, 0.85),
+            rgba(15, 45, 80, 0.15)
+        );
+}
+
+
+/* IMAGE TEXT */
+
+.image-overlay {
+
+    position: absolute;
+
+    left: 35px;
+
+    right: 35px;
+
+    bottom: 35px;
+
+    z-index: 2;
+
+    color: white;
+}
+
+.image-overlay h2 {
+
+    font-size: 28px;
+
+    line-height: 1.3;
+
+    margin-bottom: 12px;
+}
+
+.image-overlay p {
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    color: #e7edf5;
+}
+
+
+/* ================= LOGIN BOX ================= */
+
+.login-box {
+
+    padding: 50px 45px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+/* HEADER */
+
+.login-header {
+
+    margin-bottom: 30px;
+}
+
+.login-icon {
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 8px;
+
+    background: #e8f0fa;
+
+    color: #164a8a;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 23px;
+
+    margin-bottom: 18px;
+}
+
+.login-header h1 {
+
+    font-size: 28px;
+
+    color: #172b45;
+
+    margin-bottom: 8px;
+}
+
+.login-header p {
+
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+/* ================= FORM ================= */
+
+.form-group {
+
+    margin-bottom: 20px;
+}
+
+.form-group label {
+
+    display: block;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    color: #344054;
+
+    margin-bottom: 8px;
+}
+
+
+/* PASSWORD LABEL */
+
+.password-label {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 8px;
+}
+
+.password-label label {
+
+    margin-bottom: 0;
+}
+
+.password-label a {
+
+    font-size: 12px;
+
+    color: #164a8a;
+}
+
+
+/* INPUTS */
+
+.login-box input,
+.login-box select {
+
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #ccd4df;
+
+    border-radius: 6px;
+
+    outline: none;
+
+    font-size: 13px;
+
+    background: white;
+}
+
+.login-box input:focus,
+.login-box select:focus {
+
+    border-color: #164a8a;
+
+    box-shadow:
+        0 0 0 3px rgba(22, 74, 138, 0.08);
+}
+
+
+/* ================= REMEMBER ================= */
+
+.remember-row {
+
+    margin-bottom: 22px;
+
+    font-size: 13px;
+
+    color: #666;
+}
+
+.remember-row label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    cursor: pointer;
+}
+
+.remember-row input {
+
+    width: auto;
+}
+
+
+/* ================= LOGIN BUTTON ================= */
+
+.login-button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #164a8a;
+
+    color: white;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.login-button:hover {
+
+    background: #103b70;
+
+    transform: translateY(-1px);
+}
+
+
+/* ================= REGISTER ================= */
+
+.register-text {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-size: 13px;
+
+    color: #777;
+}
+
+.register-text a {
+
+    color: #164a8a;
+
+    font-weight: bold;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media(max-width: 800px) {
+
+    .login-wrapper {
+
+        grid-template-columns: 1fr;
+    }
+
+    .login-image {
+
+        min-height: 260px;
+    }
+
+    .image-overlay {
+
+        left: 25px;
+
+        right: 25px;
+
+        bottom: 25px;
+    }
+
+    .image-overlay h2 {
+
+        font-size: 22px;
+    }
+
+    .login-box {
+
+        padding: 35px 30px;
+    }
+
+}
+
+
+@media(max-width: 500px) {
+
+    .login-section {
+
+        padding: 25px 15px;
+    }
+
+    .login-box {
+
+        padding: 30px 20px;
+    }
+
+}

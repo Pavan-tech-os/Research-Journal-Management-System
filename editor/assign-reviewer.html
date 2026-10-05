@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Assign Reviewer</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            📚 Research Journal
+        </div>
+
+        <div class="sidebar-menu">
+
+            <a href="dashboard.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="submissions.html">
+                📋 Submissions
+            </a>
+
+            <a href="assign-reviewer.html"
+               class="active">
+                👥 Assign Reviewer
+            </a>
+
+            <a href="../published/papers.html">
+                📚 Published Papers
+            </a>
+
+            <a href="../index.html"
+               class="logout">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+
+        <div class="page-header">
+
+            <h1>Assign Reviewer</h1>
+
+            <p>
+                Assign a suitable reviewer to a research paper.
+            </p>
+
+        </div>
+
+
+        <div class="form-box">
+
+
+            <form id="reviewerForm">
+
+
+                <div class="form-group">
+
+                    <label>
+                        Select Research Paper
+                    </label>
+
+                    <select required>
+
+                        <option value="">
+                            Select paper
+                        </option>
+
+                        <option>
+                            RJMS001 - AI in Healthcare
+                        </option>
+
+                        <option>
+                            RJMS002 - Cloud Computing Security
+                        </option>
+
+                        <option>
+                            RJMS004 - Network Security
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Select Reviewer
+                    </label>
+
+                    <select required>
+
+                        <option value="">
+                            Select reviewer
+                        </option>
+
+                        <option>
+                            Dr. Kumar - AI Specialist
+                        </option>
+
+                        <option>
+                            Dr. Priya - Data Science
+                        </option>
+
+                        <option>
+                            Dr. Raj - Cyber Security
+                        </option>
+
+                        <option>
+                            Dr. Sharma - Machine Learning
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-row">
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Review Deadline
+                        </label>
+
+                        <input
+                            type="date"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Priority
+                        </label>
+
+                        <select>
+
+                            <option>
+                                Normal
+                            </option>
+
+                            <option>
+                                High
+                            </option>
+
+                            <option>
+                                Urgent
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label>
+                        Message to Reviewer
+                    </label>
+
+                    <textarea
+                        placeholder="Add instructions or message for the reviewer..."
+                    ></textarea>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    Assign Reviewer
+
+                </button>
+
+
+            </form>
+
+
+        </div>
+
+
+        <!-- PLAGIARISM -->
+
+        <div class="panel"
+             style="margin-top:25px; max-width:900px;">
+
+            <h2>
+                Plagiarism Check
+            </h2>
+
+            <p style="
+                color:#777;
+                font-size:13px;
+                margin-bottom:15px;
+            ">
+
+                Select a submitted paper to perform a
+                plagiarism check.
+
+            </p>
+
+
+            <button
+                class="btn btn-secondary"
+                onclick="checkPlagiarism()">
+
+                🔍 Check Plagiarism
+
+            </button>
+
+
+            <div
+                id="plagiarismResult"
+                style="
+                    display:none;
+                    margin-top:20px;
+                    padding:15px;
+                    background:#eef8f0;
+                    border-radius:5px;
+                    color:#155724;
+                    font-size:13px;
+                "
+            >
+
+                Similarity Score:
+                <strong>12%</strong>
+
+                <br>
+
+                Status:
+                <strong>Low Similarity</strong>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <script src="../js/editor.js"></script>
+
+</body>
+
+</html>

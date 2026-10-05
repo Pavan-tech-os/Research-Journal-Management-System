@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Submissions</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+        }
+
+        .sidebar {
+            position: fixed;
+            width: 240px;
+            height: 100vh;
+            background: #163f6f;
+            color: white;
+            padding: 25px 15px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 0 15px 30px;
+            border-bottom: 1px solid #31577f;
+        }
+
+        .menu {
+            margin-top: 30px;
+        }
+
+        .menu a {
+            display: block;
+            color: #dce7f3;
+            text-decoration: none;
+            padding: 13px 15px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .menu a:hover,
+        .menu a.active {
+            background: #24578f;
+            color: white;
+        }
+
+        .main {
+            margin-left: 240px;
+            padding: 35px 45px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .header h1 {
+            font-size: 26px;
+        }
+
+        .header p {
+            color: #777;
+            font-size: 13px;
+            margin-top: 6px;
+        }
+
+        .new-paper {
+            text-decoration: none;
+            background: #163f6f;
+            color: white;
+            padding: 12px 18px;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+
+        .table-box {
+            background: white;
+            border: 1px solid #e1e5eb;
+            border-radius: 8px;
+            padding: 25px;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 700px;
+        }
+
+        th,
+        td {
+            padding: 16px 12px;
+            border-bottom: 1px solid #eee;
+            text-align: left;
+            font-size: 13px;
+        }
+
+        th {
+            background: #f8fafc;
+            color: #666;
+            font-size: 12px;
+        }
+
+        .paper-title {
+            font-weight: bold;
+            color: #163f6f;
+        }
+
+        .status {
+            padding: 6px 10px;
+            border-radius: 15px;
+            font-size: 11px;
+        }
+
+        .review {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .accepted {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .revision {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .published {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .view {
+            text-decoration: none;
+            color: #163f6f;
+            font-weight: bold;
+            font-size: 12px;
+        }
+
+        @media(max-width: 700px) {
+
+            .sidebar {
+                width: 70px;
+            }
+
+            .logo {
+                font-size: 0;
+            }
+
+            .menu a {
+                font-size: 0;
+                text-align: center;
+            }
+
+            .main {
+                margin-left: 70px;
+                padding: 20px;
+            }
+
+            .header {
+                align-items: flex-start;
+                gap: 15px;
+                flex-direction: column;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            📚 Research Journal
+        </div>
+
+        <div class="menu">
+
+            <a href="dashboard.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="submit-paper.html">
+                📄 Submit Paper
+            </a>
+
+            <a href="submissions.html"
+               class="active">
+                📋 My Submissions
+            </a>
+
+            <a href="revisions.html">
+                🔄 Revisions
+            </a>
+
+            <a href="../index.html">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <div class="header">
+
+            <div>
+
+                <h1>My Submissions</h1>
+
+                <p>
+                    Track the status of all your research papers.
+                </p>
+
+            </div>
+
+            <a
+                href="submit-paper.html"
+                class="new-paper">
+                + Submit New Paper
+            </a>
+
+        </div>
+
+
+        <div class="table-box">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+
+                        <th>Paper ID</th>
+
+                        <th>Paper Title</th>
+
+                        <th>Submitted Date</th>
+
+                        <th>Reviewer</th>
+
+                        <th>Status</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <tr>
+
+                        <td>RJMS001</td>
+
+                        <td class="paper-title">
+                            AI in Healthcare
+                        </td>
+
+                        <td>
+                            05 Sep 2026
+                        </td>
+
+                        <td>
+                            Dr. Kumar
+                        </td>
+
+                        <td>
+
+                            <span class="status review">
+                                Under Review
+                            </span>
+
+                        </td>
+
+                        <td>
+                            <a href="#" class="view">
+                                View
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>RJMS002</td>
+
+                        <td class="paper-title">
+                            Machine Learning Applications
+                        </td>
+
+                        <td>
+                            28 Aug 2026
+                        </td>
+
+                        <td>
+                            Dr. Priya
+                        </td>
+
+                        <td>
+
+                            <span class="status accepted">
+                                Accepted
+                            </span>
+
+                        </td>
+
+                        <td>
+                            <a href="#" class="view">
+                                View
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>RJMS003</td>
+
+                        <td class="paper-title">
+                            Network Security
+                        </td>
+
+                        <td>
+                            20 Aug 2026
+                        </td>
+
+                        <td>
+                            Dr. Raj
+                        </td>
+
+                        <td>
+
+                            <span class="status revision">
+                                Revision Required
+                            </span>
+
+                        </td>
+
+                        <td>
+                            <a
+                                href="revisions.html"
+                                class="view">
+                                Revise
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>RJMS004</td>
+
+                        <td class="paper-title">
+                            Data Science in Smart Cities
+                        </td>
+
+                        <td>
+                            10 Aug 2026
+                        </td>
+
+                        <td>
+                            Dr. Sharma
+                        </td>
+
+                        <td>
+
+                            <span class="status published">
+                                Published
+                            </span>
+
+                        </td>
+
+                        <td>
+                            <a href="#" class="view">
+                                View
+                            </a>
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

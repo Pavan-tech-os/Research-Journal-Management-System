@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - Research Journal Management System</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+
+</head>
+
+<body class="auth-page">
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Research Journal
+        </div>
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="index.html#about">About</a>
+
+            <a href="index.html#features">Features</a>
+
+            <a href="register.html">Register</a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- LOGIN SECTION -->
+
+    <main class="login-section">
+
+        <div class="login-wrapper">
+
+
+            <!-- LEFT IMAGE -->
+
+            <div class="login-image">
+
+                <!-- YOUR IMAGE -->
+
+                <img
+                    src="assets/images/research-hero.jpg"
+                    alt="Research Journal"
+                >
+
+                <div class="image-overlay">
+
+                    <h2>
+                        Research Journal
+                        Management System
+                    </h2>
+
+                    <p>
+                        Submit, review and manage
+                        research papers through a
+                        simple academic workflow.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT LOGIN FORM -->
+
+            <div class="login-box">
+
+                <div class="login-header">
+
+                    <div class="login-icon">
+                        🔐
+                    </div>
+
+                    <h1>
+                        Welcome Back
+                    </h1>
+
+                    <p>
+                        Login to continue to your dashboard
+                    </p>
+
+                </div>
+
+
+                <form id="loginForm">
+
+                    <!-- EMAIL -->
+
+                    <div class="form-group">
+
+                        <label for="email">
+                            Email Address
+                        </label>
+
+                        <input
+                            type="email"
+                            id="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="form-group">
+
+                        <div class="password-label">
+
+                            <label for="password">
+                                Password
+                            </label>
+
+                            <a href="#">
+                                Forgot Password?
+                            </a>
+
+                        </div>
+
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- ROLE -->
+
+                    <div class="form-group">
+
+                        <label for="role">
+                            Login As
+                        </label>
+
+                        <select id="role" required>
+
+                            <option value="">
+                                Select your role
+                            </option>
+
+                            <option value="author">
+                                Author
+                            </option>
+
+                            <option value="editor">
+                                Editor
+                            </option>
+
+                            <option value="reviewer">
+                                Reviewer
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <!-- REMEMBER ME -->
+
+                    <div class="remember-row">
+
+                        <label>
+
+                            <input
+                                type="checkbox"
+                                id="remember"
+                            >
+
+                            Remember me
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- LOGIN BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="login-button"
+                    >
+                        Login
+                    </button>
+
+                </form>
+
+
+                <!-- REGISTER -->
+
+                <div class="register-text">
+
+                    Don't have an account?
+
+                    <a href="register.html">
+                        Create an account
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Research Journal Management System
+        </p>
+
+        <p>
+            Academic Research & Publication Management
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="js/login.js"></script>
+
+</body>
+
+</html>

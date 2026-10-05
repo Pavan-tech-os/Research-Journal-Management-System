@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Editor Dashboard</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            📚 Research Journal
+        </div>
+
+        <div class="sidebar-menu">
+
+            <a href="dashboard.html" class="active">
+                🏠 Dashboard
+            </a>
+
+            <a href="submissions.html">
+                📋 Submissions
+            </a>
+
+            <a href="assign-reviewer.html">
+                👥 Assign Reviewer
+            </a>
+
+            <a href="../published/papers.html">
+                📚 Published Papers
+            </a>
+
+            <a href="../index.html" class="logout">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main-content">
+
+        <div class="dashboard-header">
+
+            <div class="page-header">
+
+                <h1>Editor Dashboard</h1>
+
+                <p>
+                    Manage research submissions and peer review.
+                </p>
+
+            </div>
+
+
+            <div class="profile">
+
+                <div class="profile-icon">
+                    E
+                </div>
+
+                <div>
+                    <strong>Editor</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- STATISTICS -->
+
+        <section class="stats">
+
+            <div class="stat-card">
+
+                <p>Total Submissions</p>
+
+                <h2>120</h2>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <p>Pending Review</p>
+
+                <h2>25</h2>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <p>Under Review</p>
+
+                <h2>40</h2>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <p>Accepted</p>
+
+                <h2>35</h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONTENT -->
+
+        <section class="content-grid">
+
+
+            <!-- SUBMISSIONS -->
+
+            <div class="panel">
+
+                <h2>Recent Submissions</h2>
+
+                <table>
+
+                    <tr>
+
+                        <th>Paper</th>
+
+                        <th>Author</th>
+
+                        <th>Status</th>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <strong>AI in Healthcare</strong>
+                        </td>
+
+                        <td>
+                            Dr. Ayyappa
+                        </td>
+
+                        <td>
+
+                            <span class="status status-review">
+                                Under Review
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <strong>Cloud Computing Security</strong>
+                        </td>
+
+                        <td>
+                            Rahul Kumar
+                        </td>
+
+                        <td>
+
+                            <span class="status status-revision">
+                                Revision
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+                            <strong>Smart City Analytics</strong>
+                        </td>
+
+                        <td>
+                            Priya Sharma
+                        </td>
+
+                        <td>
+
+                            <span class="status status-accepted">
+                                Accepted
+                            </span>
+
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+
+            <!-- QUICK ACTIONS -->
+
+            <div class="panel">
+
+                <h2>Quick Actions</h2>
+
+                <div class="quick-actions">
+
+                    <a href="submissions.html">
+                        View Submissions
+                    </a>
+
+                    <a href="assign-reviewer.html">
+                        Assign Reviewer
+                    </a>
+
+                    <a href="../published/papers.html">
+                        Published Papers
+                    </a>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

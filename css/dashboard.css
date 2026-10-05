@@ -1,0 +1,64 @@
+.dashboard-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: #dce8f8;
+
+    color: #163f6f;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.quick-actions {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+.quick-actions a {
+    padding: 12px;
+
+    background: #eef3f8;
+
+    color: #163f6f;
+
+    border-radius: 5px;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+.quick-actions a:first-child {
+    background: #163f6f;
+
+    color: white;
+}

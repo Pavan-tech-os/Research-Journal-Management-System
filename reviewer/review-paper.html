@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Review Paper</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            📚 Research Journal
+        </div>
+
+
+        <div class="sidebar-menu">
+
+            <a href="dashboard.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="assigned-papers.html">
+                📄 Assigned Papers
+            </a>
+
+            <a href="review-paper.html"
+               class="active">
+                📝 Review Paper
+            </a>
+
+            <a href="../published/papers.html">
+                📚 Published Papers
+            </a>
+
+            <a href="../index.html"
+               class="logout">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <main class="main-content">
+
+
+        <div class="page-header">
+
+            <h1>Review Research Paper</h1>
+
+            <p>
+                Evaluate the paper and provide your recommendation.
+            </p>
+
+        </div>
+
+
+        <!-- PAPER DETAILS -->
+
+        <div class="panel"
+             style="max-width:900px; margin-bottom:25px;">
+
+            <h2>
+                Artificial Intelligence in Healthcare
+            </h2>
+
+            <p style="
+                color:#777;
+                font-size:13px;
+                margin-bottom:15px;
+            ">
+
+                Paper ID: RJMS001
+
+            </p>
+
+
+            <div style="
+                display:grid;
+                grid-template-columns:1fr 1fr;
+                gap:15px;
+            ">
+
+                <div>
+
+                    <strong>
+                        Author
+                    </strong>
+
+                    <p style="
+                        color:#777;
+                        font-size:13px;
+                        margin-top:5px;
+                    ">
+                        Dr. Ayyappa
+                    </p>
+
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Research Area
+                    </strong>
+
+                    <p style="
+                        color:#777;
+                        font-size:13px;
+                        margin-top:5px;
+                    ">
+                        Artificial Intelligence
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <hr style="
+                border:0;
+                border-top:1px solid #eee;
+                margin:20px 0;
+            ">
+
+
+            <h3 style="margin-bottom:10px;">
+                Abstract
+            </h3>
+
+            <p style="
+                color:#666;
+                font-size:13px;
+                line-height:1.7;
+            ">
+
+                This research paper explores the application of
+                artificial intelligence techniques in healthcare.
+                The study investigates machine learning approaches
+                for improving diagnosis, prediction and patient care.
+
+            </p>
+
+        </div>
+
+
+        <!-- REVIEW FORM -->
+
+        <div class="form-box">
+
+            <form id="reviewForm">
+
+
+                <h2 style="
+                    margin-bottom:25px;
+                    color:#164a8a;
+                ">
+
+                    Peer Review Form
+
+                </h2>
+
+
+                <!-- RATING -->
+
+                <div class="form-group">
+
+                    <label>
+                        Overall Rating
+                    </label>
+
+                    <select required>
+
+                        <option value="">
+                            Select rating
+                        </option>
+
+                        <option>
+                            5 - Excellent
+                        </option>
+
+                        <option>
+                            4 - Very Good
+                        </option>
+
+                        <option>
+                            3 - Good
+                        </option>
+
+                        <option>
+                            2 - Needs Improvement
+                        </option>
+
+                        <option>
+                            1 - Poor
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- COMMENTS -->
+
+                <div class="form-group">
+
+                    <label>
+                        Review Comments
+                    </label>
+
+                    <textarea
+                        placeholder="Enter detailed feedback for the author..."
+                        required
+                    ></textarea>
+
+                </div>
+
+
+                <!-- STRENGTHS -->
+
+                <div class="form-group">
+
+                    <label>
+                        Strengths of the Paper
+                    </label>
+
+                    <textarea
+                        placeholder="Mention the strengths of the research..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- WEAKNESSES -->
+
+                <div class="form-group">
+
+                    <label>
+                        Areas for Improvement
+                    </label>
+
+                    <textarea
+                        placeholder="Mention areas that need improvement..."
+                    ></textarea>
+
+                </div>
+
+
+                <!-- RECOMMENDATION -->
+
+                <div class="form-group">
+
+                    <label>
+                        Recommendation
+                    </label>
+
+                    <select required>
+
+                        <option value="">
+                            Select recommendation
+                        </option>
+
+                        <option>
+                            Accept
+                        </option>
+
+                        <option>
+                            Minor Revision
+                        </option>
+
+                        <option>
+                            Major Revision
+                        </option>
+
+                        <option>
+                            Reject
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="btn btn-primary">
+
+                    Submit Review
+
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </main>
+
+
+    <script src="../js/reviewer.js"></script>
+
+</body>
+
+</html>

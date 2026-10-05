@@ -1,0 +1,1 @@
+console.log("Research Journal Management System loaded successfully.");

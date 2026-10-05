@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Published Papers</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- NAVIGATION -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            📚 Research Journal
+        </div>
+
+
+        <div class="nav-links">
+
+            <a href="../index.html">
+                Home
+            </a>
+
+            <a href="papers.html">
+                Published Papers
+            </a>
+
+            <a href="archive.html">
+                Archive
+            </a>
+
+            <a href="../login.html"
+               class="nav-button">
+
+                Login
+
+            </a>
+
+        </div>
+
+    </nav>
+
+
+    <!-- MAIN -->
+
+    <main style="
+        max-width:1200px;
+        margin:auto;
+        padding:50px 7%;
+    ">
+
+
+        <div class="page-header">
+
+            <h1>
+                Published Research Papers
+            </h1>
+
+            <p>
+                Explore research papers published in our journal.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div style="
+            margin-bottom:30px;
+        ">
+
+            <input
+                type="text"
+                id="paperSearch"
+                placeholder="Search published papers..."
+                style="
+                    width:100%;
+                    max-width:500px;
+                    padding:13px;
+                    border:1px solid #ccd3dc;
+                    border-radius:5px;
+                    outline:none;
+                "
+            >
+
+        </div>
+
+
+        <!-- PAPERS -->
+
+        <div id="papers">
+
+
+            <div class="panel paper-item"
+                 style="margin-bottom:20px;">
+
+                <span style="
+                    color:#164a8a;
+                    font-size:11px;
+                    font-weight:bold;
+                ">
+                    ARTIFICIAL INTELLIGENCE
+                </span>
+
+
+                <h2 style="
+                    margin:10px 0;
+                    font-size:20px;
+                ">
+
+                    Artificial Intelligence in Healthcare
+
+                </h2>
+
+
+                <p style="
+                    color:#666;
+                    font-size:13px;
+                    line-height:1.7;
+                ">
+
+                    A study on the application of artificial
+                    intelligence and machine learning techniques
+                    in modern healthcare systems.
+
+                </p>
+
+
+                <div style="
+                    margin-top:18px;
+                    display:flex;
+                    justify-content:space-between;
+                    align-items:center;
+                ">
+
+                    <span style="
+                        color:#777;
+                        font-size:12px;
+                    ">
+
+                        Dr. Ayyappa · September 2026
+
+                    </span>
+
+
+                    <button
+                        class="btn btn-primary"
+                        onclick="readPaper()">
+
+                        Read Paper
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel paper-item"
+                 style="margin-bottom:20px;">
+
+                <span style="
+                    color:#164a8a;
+                    font-size:11px;
+                    font-weight:bold;
+                ">
+                    MACHINE LEARNING
+                </span>
+
+
+                <h2 style="
+                    margin:10px 0;
+                    font-size:20px;
+                ">
+
+                    Machine Learning Applications
+
+                </h2>
+
+
+                <p style="
+                    color:#666;
+                    font-size:13px;
+                    line-height:1.7;
+                ">
+
+                    Research on machine learning algorithms
+                    and their applications in real-world systems.
+
+                </p>
+
+
+                <div style="
+                    margin-top:18px;
+                    display:flex;
+                    justify-content:space-between;
+                    align-items:center;
+                ">
+
+                    <span style="
+                        color:#777;
+                        font-size:12px;
+                    ">
+
+                        Dr. Priya Sharma · August 2026
+
+                    </span>
+
+
+                    <button
+                        class="btn btn-primary"
+                        onclick="readPaper()">
+
+                        Read Paper
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel paper-item"
+                 style="margin-bottom:20px;">
+
+                <span style="
+                    color:#164a8a;
+                    font-size:11px;
+                    font-weight:bold;
+                ">
+                    CYBER SECURITY
+                </span>
+
+
+                <h2 style="
+                    margin:10px 0;
+                    font-size:20px;
+                ">
+
+                    Modern Network Security Techniques
+
+                </h2>
+
+
+                <p style="
+                    color:#666;
+                    font-size:13px;
+                    line-height:1.7;
+                ">
+
+                    An analysis of modern cybersecurity methods
+                    used to protect digital infrastructure.
+
+                </p>
+
+
+                <div style="
+                    margin-top:18px;
+                    display:flex;
+                    justify-content:space-between;
+                    align-items:center;
+                ">
+
+                    <span style="
+                        color:#777;
+                        font-size:12px;
+                    ">
+
+                        Dr. Raj Kumar · July 2026
+
+                    </span>
+
+
+                    <button
+                        class="btn btn-primary"
+                        onclick="readPaper()">
+
+                        Read Paper
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </main>
+
+
+    <script>
+
+        const search =
+            document.getElementById("paperSearch");
+
+        search.addEventListener("input", function() {
+
+            const value =
+                this.value.toLowerCase();
+
+            const papers =
+                document.querySelectorAll(".paper-item");
+
+            papers.forEach(function(paper) {
+
+                if (
+                    paper.innerText
+                    .toLowerCase()
+                    .includes(value)
+                ) {
+
+                    paper.style.display = "block";
+
+                } else {
+
+                    paper.style.display = "none";
+
+                }
+
+            });
+
+        });
+
+
+        function readPaper() {
+
+            alert(
+                "Research paper viewer will open here."
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>

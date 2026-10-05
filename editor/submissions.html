@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Manage Submissions</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+            📚 Research Journal
+        </div>
+
+        <div class="sidebar-menu">
+
+            <a href="dashboard.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="submissions.html"
+               class="active">
+                📋 Submissions
+            </a>
+
+            <a href="assign-reviewer.html">
+                👥 Assign Reviewer
+            </a>
+
+            <a href="../published/papers.html">
+                📚 Published Papers
+            </a>
+
+            <a href="../index.html"
+               class="logout">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main-content">
+
+
+        <div class="page-header">
+
+            <h1>Manage Submissions</h1>
+
+            <p>
+                Review and manage submitted research papers.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="panel"
+             style="margin-bottom:20px;">
+
+            <div style="
+                display:flex;
+                gap:15px;
+                flex-wrap:wrap;
+            ">
+
+                <input
+                    type="text"
+                    id="searchPaper"
+                    placeholder="Search paper title..."
+                    style="
+                        padding:11px;
+                        border:1px solid #ccd3dc;
+                        border-radius:5px;
+                        width:250px;
+                    "
+                >
+
+
+                <select
+                    id="statusFilter"
+                    style="
+                        padding:11px;
+                        border:1px solid #ccd3dc;
+                        border-radius:5px;
+                    "
+                >
+
+                    <option value="all">
+                        All Status
+                    </option>
+
+                    <option value="review">
+                        Under Review
+                    </option>
+
+                    <option value="revision">
+                        Revision Required
+                    </option>
+
+                    <option value="accepted">
+                        Accepted
+                    </option>
+
+                    <option value="rejected">
+                        Rejected
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- TABLE -->
+
+        <div class="table-container">
+
+            <table id="submissionTable">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Paper ID</th>
+
+                        <th>Paper Title</th>
+
+                        <th>Author</th>
+
+                        <th>Submitted</th>
+
+                        <th>Reviewer</th>
+
+                        <th>Status</th>
+
+                        <th>Action</th>
+
+                    </tr>
+
+                </thead>
+
+
+                <tbody>
+
+
+                    <tr>
+
+                        <td>RJMS001</td>
+
+                        <td>
+                            <strong>AI in Healthcare</strong>
+                        </td>
+
+                        <td>
+                            Dr. Ayyappa
+                        </td>
+
+                        <td>
+                            05 Sep 2026
+                        </td>
+
+                        <td>
+                            Dr. Kumar
+                        </td>
+
+                        <td>
+
+                            <span class="status status-review">
+                                Under Review
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <a href="#"
+                               onclick="viewPaper('RJMS001')"
+                               style="color:#164a8a;">
+                                View
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>RJMS002</td>
+
+                        <td>
+                            <strong>
+                                Cloud Computing Security
+                            </strong>
+                        </td>
+
+                        <td>
+                            Rahul Kumar
+                        </td>
+
+                        <td>
+                            02 Sep 2026
+                        </td>
+
+                        <td>
+                            Not Assigned
+                        </td>
+
+                        <td>
+
+                            <span class="status status-revision">
+                                Revision Required
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <a href="assign-reviewer.html"
+                               style="color:#164a8a;">
+                                Assign
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>RJMS003</td>
+
+                        <td>
+                            <strong>
+                                Machine Learning Applications
+                            </strong>
+                        </td>
+
+                        <td>
+                            Priya Sharma
+                        </td>
+
+                        <td>
+                            28 Aug 2026
+                        </td>
+
+                        <td>
+                            Dr. Priya
+                        </td>
+
+                        <td>
+
+                            <span class="status status-accepted">
+                                Accepted
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <a href="#"
+                               onclick="viewPaper('RJMS003')"
+                               style="color:#164a8a;">
+                                View
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                    <tr>
+
+                        <td>RJMS004</td>
+
+                        <td>
+                            <strong>
+                                Network Security
+                            </strong>
+                        </td>
+
+                        <td>
+                            Rahul Reddy
+                        </td>
+
+                        <td>
+                            20 Aug 2026
+                        </td>
+
+                        <td>
+                            Dr. Raj
+                        </td>
+
+                        <td>
+
+                            <span class="status status-review">
+                                Under Review
+                            </span>
+
+                        </td>
+
+                        <td>
+
+                            <a href="#"
+                               onclick="viewPaper('RJMS004')"
+                               style="color:#164a8a;">
+                                View
+                            </a>
+
+                        </td>
+
+                    </tr>
+
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </main>
+
+
+    <script src="../js/editor.js"></script>
+
+</body>
+
+</html>

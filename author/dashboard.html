@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Author Dashboard</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+        }
+
+        .sidebar {
+            position: fixed;
+            width: 240px;
+            height: 100vh;
+            background: #163f6f;
+            color: white;
+            padding: 25px 15px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            padding: 0 15px 30px;
+            border-bottom: 1px solid #31577f;
+        }
+
+        .menu {
+            margin-top: 30px;
+        }
+
+        .menu a {
+            display: block;
+            color: #dce7f3;
+            text-decoration: none;
+            padding: 13px 15px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .menu a:hover,
+        .menu a.active {
+            background: #24578f;
+            color: white;
+        }
+
+        .logout {
+            margin-top: 40px !important;
+            color: #ffdddd !important;
+        }
+
+        .main {
+            margin-left: 240px;
+            padding: 30px 40px;
+        }
+
+        .topbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .topbar h1 {
+            font-size: 26px;
+        }
+
+        .topbar p {
+            color: #777;
+            margin-top: 6px;
+            font-size: 13px;
+        }
+
+        .profile {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            background: #dce8f8;
+            color: #163f6f;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 22px;
+            border-radius: 8px;
+            border: 1px solid #e1e5eb;
+        }
+
+        .card p {
+            color: #777;
+            font-size: 13px;
+            margin-bottom: 12px;
+        }
+
+        .card h2 {
+            color: #163f6f;
+            font-size: 28px;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .panel {
+            background: white;
+            border: 1px solid #e1e5eb;
+            border-radius: 8px;
+            padding: 25px;
+        }
+
+        .panel h2 {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 14px 10px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            font-size: 13px;
+        }
+
+        th {
+            color: #777;
+            font-size: 12px;
+        }
+
+        .status {
+            padding: 5px 9px;
+            border-radius: 15px;
+            font-size: 11px;
+        }
+
+        .review {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .accepted {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .revision {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .quick-btn {
+            display: block;
+            text-decoration: none;
+            background: #163f6f;
+            color: white;
+            padding: 13px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+
+        .quick-btn.secondary {
+            background: #eef3f8;
+            color: #163f6f;
+        }
+
+        @media(max-width: 900px) {
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media(max-width: 600px) {
+
+            .sidebar {
+                width: 70px;
+            }
+
+            .logo {
+                font-size: 0;
+            }
+
+            .logo:first-letter {
+                font-size: 25px;
+            }
+
+            .menu a {
+                font-size: 0;
+                text-align: center;
+            }
+
+            .main {
+                margin-left: 70px;
+                padding: 20px;
+            }
+
+            .cards {
+                grid-template-columns: 1fr;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            📚 Research Journal
+        </div>
+
+        <div class="menu">
+
+            <a href="dashboard.html" class="active">
+                🏠 Dashboard
+            </a>
+
+            <a href="submit-paper.html">
+                📄 Submit Paper
+            </a>
+
+            <a href="submissions.html">
+                📋 My Submissions
+            </a>
+
+            <a href="revisions.html">
+                🔄 Revisions
+            </a>
+
+            <a href="../index.html" class="logout">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <div class="topbar">
+
+            <div>
+                <h1>Author Dashboard</h1>
+                <p>Welcome back, Dr. Ayyappa</p>
+            </div>
+
+            <div class="profile">
+
+                <div class="profile-icon">
+                    A
+                </div>
+
+                <div>
+                    <strong>Author</strong>
+                    <p>Researcher</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- STATISTICS -->
+
+        <section class="cards">
+
+            <div class="card">
+                <p>Total Papers</p>
+                <h2>08</h2>
+            </div>
+
+            <div class="card">
+                <p>Under Review</p>
+                <h2>03</h2>
+            </div>
+
+            <div class="card">
+                <p>Revision Required</p>
+                <h2>01</h2>
+            </div>
+
+            <div class="card">
+                <p>Published</p>
+                <h2>04</h2>
+            </div>
+
+        </section>
+
+
+        <!-- CONTENT -->
+
+        <section class="content">
+
+
+            <!-- RECENT SUBMISSIONS -->
+
+            <div class="panel">
+
+                <h2>Recent Submissions</h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Paper Title</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+
+                            <td>
+                                AI in Healthcare
+                            </td>
+
+                            <td>
+                                05 Sep 2026
+                            </td>
+
+                            <td>
+                                <span class="status review">
+                                    Under Review
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Machine Learning Applications
+                            </td>
+
+                            <td>
+                                28 Aug 2026
+                            </td>
+
+                            <td>
+                                <span class="status accepted">
+                                    Accepted
+                                </span>
+                            </td>
+
+                        </tr>
+
+
+                        <tr>
+
+                            <td>
+                                Network Security
+                            </td>
+
+                            <td>
+                                20 Aug 2026
+                            </td>
+
+                            <td>
+                                <span class="status revision">
+                                    Revision Required
+                                </span>
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- QUICK ACTIONS -->
+
+            <div class="panel">
+
+                <h2>Quick Actions</h2>
+
+                <a href="submit-paper.html"
+                   class="quick-btn">
+                    + Submit New Paper
+                </a>
+
+                <a href="submissions.html"
+                   class="quick-btn secondary">
+                    View My Submissions
+                </a>
+
+                <a href="revisions.html"
+                   class="quick-btn secondary">
+                    Check Revisions
+                </a>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+</body>
+</html>
